@@ -1,22 +1,23 @@
-# Noktaların Tanımlanması
-noktalar = [(1, 2), (4, 6), (5, 9), (8, 8)]  # Örnek noktalar, kendi noktalarınızı ekleyebilirsiniz
+# Defining the Points
+points = [(1, 2), (4, 6), (5, 9), (8, 8)]  # Example points, you can add your own
 
-# Öklid Mesafesi İçin Bir Fonksiyon Yazma
-def oklidMesafesi(nokta1, nokta2):
-    x_farki = nokta2[0] - nokta1[0]
-    y_farki = nokta2[1] - nokta1[1]
-    return (x_farki * x_farki + y_farki * y_farki) ** 0.5
+# Writing a Function for Euclidean Distance
+def euclideanDistance(point1, point2):
+    x_diff = point2[0] - point1[0]
+    y_diff = point2[1] - point1[1]
+    return (x_diff * x_diff + y_diff * y_diff) ** 0.5
 
-# Mesafelerin Hesaplanması
-mesafeler = []
-for i in range(len(noktalar)):
-    for j in range(i + 1, len(noktalar)):
-        mesafe = oklidMesafesi(noktalar[i], noktalar[j])
-        mesafeler.append(mesafe)
+# Calculating the Distances
+distances = []
+for i in range(len(points)):
+    for j in range(i + 1, len(points)):
+        distance = euclideanDistance(points[i], points[j])
+        distances.append(distance)
 
-# Minimum Mesafenin Bulunması
-min_mesafe = min(mesafeler)
+# Finding the Minimum Distance
+min_distance = min(distances)
 
-# Sonuçları Yazdırma
-print("Mesafeler:", mesafeler)
-print("Minimum Mesafe:", min_mesafe)
+# Printing the Results
+print("Distances:", distances)
+print("Minimum Distance:", min_distance)
+
