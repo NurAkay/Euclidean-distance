@@ -3,9 +3,9 @@ points = [(1, 2), (4, 6), (5, 9), (8, 8)]  # Example points, you can add your ow
 
 # Writing a Function for Euclidean Distance
 def euclideanDistance(point1, point2):
-    x_diff = point2[0] - point1[0]
-    y_diff = point2[1] - point1[1]
-    return (x_diff * x_diff + y_diff * y_diff) ** 0.5
+    x_difference = point2[0] - point1[0]
+    y_difference = point2[1] - point1[1]
+    return (x_difference * x_difference + y_difference * y_difference) ** 0.5
 
 # Calculating the Distances
 distances = []
@@ -20,4 +20,5 @@ min_distance = min(distances)
 # Printing the Results
 print("Distances:", distances)
 print("Minimum Distance:", min_distance)
+
 
